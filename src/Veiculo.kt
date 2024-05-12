@@ -1,15 +1,11 @@
-abstract class Veiculo(var velocity: Long, var model: String, var acceleration: Long = 10 ) {
+abstract class Veiculo() {
+    abstract var velocity: Long
+    abstract var model: String
+    abstract var acceleration: Long
 
-    fun velocityUp(){
-        velocity += acceleration
-    }
+    abstract fun velocityUp()
 
-    fun velocityDown(){
-        if (velocity - acceleration < 0){
-            velocity = 0
-        }else{
-            velocity -= acceleration
-        }
-
-    }
+    abstract fun velocityDown()
 }
+
+
